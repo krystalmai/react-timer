@@ -1,6 +1,6 @@
 :root {
-  --text-shadow-color: #ff9c99;
-  --text-main-color: #d74742;
+  --text-shadow-color: #cab0e4;
+  --text-main-color: #7a26dc;
 }
 * {
   box-sizing: border-box;
@@ -22,22 +22,7 @@ code {
     monospace;
 }
 
-h1 {
-  color: var(--text-main-color);
-  font-family: "Rouge Script", cursive;
-  font-size: 130px;
-  font-weight: normal;
-  line-height: 48px;
-  margin: 0 0 50px;
-  text-align: center;
-  text-shadow: 1px 1px 2px var(--text-shadow-color);
-}
 
-p {
-  color: #ffffff;
-  font-family: "Carme", sans-serif;
-  font-size: 16px;
-}
 
 .container {
   margin: auto;
@@ -47,34 +32,36 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #0c0c0c;
 }
 .timer__wrapper {
+  padding: 5em 5em 0 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 24px;
-  background-color: var(--text-shadow-color);
+  background-color: var(--text-main-color);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
-.timer__display {
-  padding-left: 1.5em;
-}
-.timer__display > p {
-  font-size: 5em;
-}
+
 
 .button__wrapper {
   display: flex;
   width: 30vw;
   padding: 1em;
+  gap: 1em;
   justify-content: space-evenly;
   align-items: center;
 }
 .button {
-  color: white;
-  background-color: var(--text-shadow-color);
-  font-size: 1.5em;
-  border-radius: 100vh;
+  color: var(--text-main-color);
+  background-color: #fff;
+  font-size: 1.2em;
+  border-radius: 5px;
   border: 1px solid white;
-  padding: 1em;
+  padding: 0.5em 1em;
   transition: ease-in-out 0.3s;
 }
 .button:active {
@@ -87,24 +74,29 @@ p {
 .button:disabled {
   background-color: rgb(170, 164, 164);
 }
-/* .button.active {
-  border: 1px solid var(--text-main-color);
-  background-color: var(--text-main-color);
-} */
+
 @media only screen and (max-device-width: 1280px) {
-  * {
-    font-size: 0.9em;
-  }
-  h1 {
-    font-size: 60px;
-    line-height: 0px;
-  }
+
   .button__wrapper {
     margin: auto;
     width: 100%;
   }
-  .timer__display > p {
-    font-size: 3.8em;
-    padding-left: 0;
+  
+}
+
+@media screen and (max-width: 500px) {
+  .timer__wrapper {
+    padding: 1em;
+    justify-content: center;
   }
+  
+}
+@media screen and (max-width: 300px) {
+  .timer__wrapper {
+    padding: 0;
+  }
+  .button {
+    font-size: 1em;
+  }
+  
 }
