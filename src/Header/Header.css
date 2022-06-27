@@ -1,0 +1,32 @@
+.header {
+  align-self: flex-start;
+  margin: 2em 0 1em;
+  font-size: 1.5em;
+  border: solid 0.5px #fff;
+}
+.white-color {
+  color: #fff;
+  padding: 0 2px;
+}
+
+.white-bg {
+  color: var(--text-main-color);
+  background-color: #fff;
+  padding: 0 2px;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 1em;
+    align-self: flex-start;
+    margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 300px) {
+  .header {
+    font-size: 1em;
+    align-self: flex-start;
+    margin-bottom: 2em;
+    margin: 1em;
+  }
+}
